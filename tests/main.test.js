@@ -3,7 +3,7 @@
  */
 
 import { expect, test, expectTypeOf, vi } from "vitest";
-import { calcTempo, averageTempo, tempoEvent } from "../main.js";
+import { calcTempo, averageTempo, tempoEvent } from "../assets/js/main.js";
 
 
 //
