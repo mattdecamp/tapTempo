@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!-- Primary Meta Tags -->
-    <title></title>
-    <meta name="title" content="" />
-    <meta name="description" content="" />
-    <link rel="canonical" href="" />
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="" />
-    <meta property="twitter:title" content="" />
-    <meta property="twitter:description" content="" />
-    <meta property="twitter:image" content="" />
-    <!-- Favicon -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="#">
-  </head>
-  <body>
-    <!-- <h1>Hey, Matt.</h1> -->
-    <!-- <h2 id="">First Click</h2>
-      <p id="currentClick"></p>
-    <h2 id="">Previous Click</h2>
-      <p id="previousClick">0</p> -->
-    <h2 id="">Tempo</h2>
-      <p id="tempo">Start tapping</p>
-    <h2 id="">Average of last Ten</h2>
-      <p id="average"></p>
-  </body>
-  <script src="main.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#d1d1d1" />
+  <!-- Primary Meta Tags -->
+  <title></title>
+  <meta name="title" content="Tempo Tap: BPM Counter" />
+  <meta name="description" content="A web utility for figuring out beats per minute." />
+  <link rel="canonical" href="https://tempotap.mattdecamp.com" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tempotap.mattdecamp.com" />
+  <meta property="og:title" content="Tempo Tap: BPM Counter" />
+  <meta property="og:description" content="A web utility for figuring out beats per minute." />
+  <meta property="og:image" content="" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tempotap.mattdecamp.com" />
+  <meta property="twitter:title" content="Tempo Tap: BPM Counter" />
+  <meta property="twitter:description" content="A web utility for figuring out beats per minute." />
+  <meta property="twitter:image" content="" />
+  <!-- Favicon -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body>
+  <main>
+    <section id="tempo--container">
+      <div id="tempo">
+        <h2 id="tempo--heading">Current Tempo</h2>
+        <p id="tempo--number">Start tapping</p>
+      </div>
+      <div id="average">
+        <h3 id="average--heading">Average Tempo</h2>
+        <p id="average--number"></p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    A project by <a href="https://mattdecamp.com">Matt DeCamp</a>
+  </footer>
+</body>
+<script src="assets/js/main.js"></script>
+
 </html>
