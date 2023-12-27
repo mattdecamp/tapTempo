@@ -1,0 +1,181 @@
+/* RESET */
+/* https://github.com/mattdecamp/resetCSS */
+
+/* box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* text overflows */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* smooth scroll for all html elements */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* fluid images */
+img,
+video,
+picture,
+cavas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* inherit font for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove anmation for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --background-color-primary: #d1d1d1;
+  --background-color-secondary: #aaacc2;
+  --background-color-tertiary: #51A3A3;
+  --heading-color-dark: #3b3561;
+  --text-color-dark: #201d35;
+}
+
+/* BODY */
+
+body {
+  margin: 0 auto;
+  width: 95%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: "LondrinaSolid-Light", Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
+  background: var(--background-color-primary);
+  background: linear-gradient(360deg,var(--background-color-secondary),var(--background-color-primary) 20%,var(--background-color-primary) 20%)
+}
+
+footer {
+  text-align: center;
+}
+
+/* TYPOGRAPHY */
+
+/* Fonts */
+
+@font-face {
+  font-family: LondrinaSolid;
+  src: url("assets/fonts/LondrinaSolid-Black.ttf"),
+    url("assets/fonts/LondrinaSolid-Light.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color-dark);
+  font-family: "LondrinaSolid-Black", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+h2 {
+  font-size: 6rem;
+  font-size: clamp(3.75rem,10vw,6rem)
+}
+
+h3 {
+  font-size: 5rem;
+  font-size: clamp(3rem,10vw,5rem)
+}
+
+p {
+  margin: 0;
+  font-size: 4.25rem;
+  font-size: clamp(2.25rem, 5vw, 4.25rem)
+}
+p,a {
+  color: var(--text-color-dark);
+}
+/* TEMPO CONTAINER */
+
+#tempo--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tempo {
+  display: grid;
+  justify-items: center;
+}
+#average {
+  display: grid;
+  justify-items: center;
+}
+
+#average--number {
+  font-size: 2.5rem;
+}
