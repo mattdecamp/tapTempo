@@ -109,11 +109,11 @@ select {
 
 @font-face {
   font-family: LondrinaSolid-Black;
-  src: url("assets/fonts/LondrinaSolid-Black.ttf");
+  src: url("/assets/fonts/LondrinaSolid-Black.ttf");
 }
 @font-face {
   font-family: LondrinaSolid-Light;
-  src: url("assets/fonts/LondrinaSolid-Light.ttf");
+  src: url("/assets/fonts/LondrinaSolid-Light.ttf");
 }
 
 /* BODY */
