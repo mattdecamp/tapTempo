@@ -93,12 +93,27 @@ select {
   }
 }
 
+/* CSS Variables */
+
 :root {
   --background-color-primary: #d1d1d1;
   --background-color-secondary: #aaacc2;
-  --background-color-tertiary: #51A3A3;
+  --background-color-tertiary: #51a3a3;
   --heading-color-dark: #3b3561;
   --text-color-dark: #201d35;
+  --font-heading: "LondrinaSolid-Black", Impact, Haettenschweiler;
+  --font-text: "LondrinaSolid-Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: LondrinaSolid-Black;
+  src: url("assets/fonts/LondrinaSolid-Black.ttf");
+}
+@font-face {
+  font-family: LondrinaSolid-Light;
+  src: url("assets/fonts/LondrinaSolid-Light.ttf");
 }
 
 /* BODY */
@@ -111,10 +126,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  font-family: "LondrinaSolid-Light", Impact, Haettenschweiler,
-    "Arial Narrow Bold", sans-serif;
+  font-family: var(--font-text);
   background: var(--background-color-primary);
-  background: linear-gradient(360deg,var(--background-color-secondary),var(--background-color-primary) 20%,var(--background-color-primary) 20%)
+  background: linear-gradient(
+    360deg,
+    var(--background-color-secondary),
+    var(--background-color-primary) 20%,
+    var(--background-color-primary) 20%
+  );
 }
 
 footer {
@@ -123,39 +142,31 @@ footer {
 
 /* TYPOGRAPHY */
 
-/* Fonts */
-
-@font-face {
-  font-family: LondrinaSolid;
-  src: url("assets/fonts/LondrinaSolid-Black.ttf"),
-    url("assets/fonts/LondrinaSolid-Light.ttf");
-}
-
 h1,
 h2,
 h3,
 h4 {
   color: var(--heading-color-dark);
-  font-family: "LondrinaSolid-Black", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: var(--font-heading);
 }
 
 h2 {
   font-size: 6rem;
-  font-size: clamp(3.75rem,10vw,6rem)
+  font-size: clamp(3.75rem, 10vw, 6rem);
 }
 
 h3 {
   font-size: 5rem;
-  font-size: clamp(3rem,10vw,5rem)
+  font-size: clamp(3rem, 10vw, 5rem);
 }
 
 p {
   margin: 0;
   font-size: 4.25rem;
-  font-size: clamp(2.25rem, 5vw, 4.25rem)
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
 }
-p,a {
+p,
+a {
   color: var(--text-color-dark);
 }
 /* TEMPO CONTAINER */
